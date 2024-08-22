@@ -1,0 +1,51 @@
+nz_zprime_group [(importing ints@primes) p:(prime?)]	: THEORY
+
+  BEGIN
+  
+  IMPORTING algebra_examples@ring_zn
+
+  %————————————– JUDGEMENTS ————————————%
+
+     
+     prime_nat: JUDGEMENT (prime?) SUBTYPE_OF posnat
+
+
+  %————————————–——————————————————-—————%
+
+%  The group of non-zero cosets for p prime. 
+     nz_coset(p:(prime?)) : Type = {x: coset(Z,nZ(p))| x /= nZ(p)}
+% Comment TBD
+     Z_sq(p:(prime?)): set[coset(Z,nZ(p))] = {x: (coset?(Z,nZ(p))) | EXISTS (a: int): x = +(a*a, nZ(p))}
+% Comment TBD
+     nz_coset_zsq(p:(prime?)) : Type = (remove(nZ(p),Z_sq(p)))
+% Comment TBD
+     one_dif_zero_cos: LEMMA +(1, nZ(p)) /= nZ(p)
+% Comment TBD
+     Zp_nz_is_group: LEMMA
+       group?[nz_coset(p),product(Z,nZ(p)),+(1,nZ(p))](remove(nZ(p), Z(p)))
+% Comment TBD
+     Zsq_nz_is_group: LEMMA
+       group?[nz_coset(p),product(Z,nZ(p)),+(1,nZ(p))](remove(nZ(p), Z_sq(p)))
+
+ IMPORTING algebra@homomorphisms[nz_coset(p),product(Z,nZ(p)),+(1,nZ(p)), nz_coset(p),product(Z,nZ(p)),+(1,nZ(p))],
+ 	   ring_cosets_lemmas_extras
+% Comment TBD
+     surj_homo_Zp_Zpsq:	LEMMA
+       LET phi: [nz_coset(p) -> nz_coset_zsq(p)] = (LAMBDA (x: nz_coset(p)): product(Z, nZ(p))(x, x)) IN
+       homomorphism?(remove(nZ(p),Z(p)),remove(nZ(p),Z_sq(p)),phi) AND surjective?(phi)
+% Comment TBD
+     kernel_homo_Zp_Zpsq: LEMMA
+       LET phi: [nz_coset(p) -> nz_coset_zsq(p)] = (LAMBDA (x: nz_coset(p)): product(Z, nZ(p))(x, x)) IN
+        kernel(remove(nZ(p),Z(p)),remove(nZ(p),Z_sq(p)))(phi) = {x: nz_coset(p) | x = +((p-1),nZ(p)) OR x = +(1,nZ(p))}
+
+    finite_ker_Zp_Zpsq: CONJECTURE
+       LET phi: [nz_coset(p) -> nz_coset_zsq(p)] = (LAMBDA (x: nz_coset(p)): product(Z, nZ(p))(x, x)) IN
+        LET ker_phi =  kernel(remove(nZ(p),Z(p)),remove(nZ(p),Z_sq(p)))(phi) IN
+        is_finite(ker_phi) 
+
+    card_ker_Zp_Zpsq: CONJECTURE
+       LET phi: [nz_coset(p) -> nz_coset_zsq(p)] = (LAMBDA (x: nz_coset(p)): product(Z, nZ(p))(x, x)) IN
+        LET ker_phi =  kernel(remove(nZ(p),Z(p)),remove(nZ(p),Z_sq(p)))(phi) IN
+        (p ≠ 2) IMPLIES Card (ker_phi) = 2
+
+  END nz_zprime_group

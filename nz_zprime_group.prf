@@ -1,0 +1,63 @@
+(|nz_zprime_group|
+ (|prime_nat| 0
+  (|prime_nat-1| NIL 3932743127 ("" (JUDGEMENT-TCC) NIL NIL) NIL NIL
+   (|prime_nat| SUBTYPE "nz_zprime_group.x" "posnat")))
+ (|nz_coset_zsq_TCC1| 0
+  (|nz_coset_zsq_TCC1-1| NIL 3932743127 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+   (|nz_coset_zsq| SUBTYPE "ring_zn.nZ(nz_zprime_group.p)"
+    "coset[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)](ring_zn.Z, ring_zn.nZ(nz_zprime_group.p))")))
+ (|one_dif_zero_cos| 0
+  (|one_dif_zero_cos-1| NIL 3932743153 ("" (POSTPONE) NIL NIL) NIL SHOSTAK))
+ (|Zp_nz_is_group_TCC1| 0
+  (|Zp_nz_is_group_TCC1-1| NIL 3932743127 ("" (EXISTENCE-TCC) NIL NIL) NIL NIL
+   (|Zp_nz_is_group| EXISTENCE "" "nz_coset(nz_zprime_group.p)")))
+ (|Zp_nz_is_group_TCC2| 0
+  (|Zp_nz_is_group_TCC2-1| NIL 3932743127 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+   (|Zp_nz_is_group| SUBTYPE
+    "restrict[[coset[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)](ring_zn.Z, ring_zn.nZ(nz_zprime_group.p)), coset[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)](ring_zn.Z, ring_zn.nZ(nz_zprime_group.p))], [nz_coset(nz_zprime_group.p), nz_coset(nz_zprime_group.p)], set[int]].restrict(product_coset_def[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+), restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.*)].product(ring_zn.Z, ring_zn.nZ(nz_zprime_group.p)))"
+    "[[nz_coset(nz_zprime_group.p), nz_coset(nz_zprime_group.p)] -> nz_coset(nz_zprime_group.p)]")))
+ (|Zp_nz_is_group_TCC3| 0
+  (|Zp_nz_is_group_TCC3-1| NIL 3932743127 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+   (|Zp_nz_is_group| SUBTYPE
+    "(cosets_def[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)].+)(1, ring_zn.nZ(nz_zprime_group.p))"
+    "nz_coset(nz_zprime_group.p)")))
+ (|Zsq_nz_is_group_TCC1| 0
+  (|Zsq_nz_is_group_TCC1-1| NIL 3932743127 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+   (|Zsq_nz_is_group| SUBTYPE "ring_zn.nZ(nz_zprime_group.p)"
+    "coset[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)](ring_zn.Z, ring_zn.nZ(nz_zprime_group.p))")))
+ (|IMP_homomorphisms_TCC1| 0
+  (|IMP_homomorphisms_TCC1-1| NIL 3932743127 ("" (ASSUMING-TCC) NIL NIL) NIL
+   NIL
+   (|IMP_homomorphisms| ASSUMING
+    "algebra@homomorphisms[nz_coset(nz_zprime_group.p), restrict[[coset[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)](ring_zn.Z, ring_zn.nZ(nz_zprime_group.p)), coset[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)](ring_zn.Z, ring_zn.nZ(nz_zprime_group.p))], [nz_coset(nz_zprime_group.p), nz_coset(nz_zprime_group.p)], set[int]].restrict(product_coset_def[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+), restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.*)].product(ring_zn.Z, ring_zn.nZ(nz_zprime_group.p))), (cosets_def[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)].+)(1, ring_zn.nZ(nz_zprime_group.p)), nz_coset(nz_zprime_group.p), restrict[[coset[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)](ring_zn.Z, ring_zn.nZ(nz_zprime_group.p)), coset[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)](ring_zn.Z, ring_zn.nZ(nz_zprime_group.p))], [nz_coset(nz_zprime_group.p), nz_coset(nz_zprime_group.p)], set[int]].restrict(product_coset_def[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+), restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.*)].product(ring_zn.Z, ring_zn.nZ(nz_zprime_group.p))), (cosets_def[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)].+)(1, ring_zn.nZ(nz_zprime_group.p))].homomorphisms"
+    "T1_is_group: ASSUMPTION group_def[homomorphisms.T1, homomorphisms.*, homomorphisms.one1].group?(sets[homomorphisms.T1].fullset)")))
+ (|surj_homo_Zp_Zpsq_TCC1| 0
+  (|surj_homo_Zp_Zpsq_TCC1-1| NIL 3932743127 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+   (|surj_homo_Zp_Zpsq| SUBTYPE
+    "product_coset_def[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+), restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.*)].product(ring_zn.Z, ring_zn.nZ(nz_zprime_group.p))(nz_zprime_group.x, nz_zprime_group.x)"
+    "nz_coset_zsq(nz_zprime_group.p)")))
+ (|surj_homo_Zp_Zpsq_TCC2| 0
+  (|surj_homo_Zp_Zpsq_TCC2-1| NIL 3932743127 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+   (|surj_homo_Zp_Zpsq| SUBTYPE
+    "restrict[set[int], nz_coset(nz_zprime_group.p), bool].restrict(sets[set[int]].remove(ring_zn.nZ(nz_zprime_group.p), ring_zn.Z(nz_zprime_group.p)))"
+    "group[nz_coset(p), restrict[[coset[int, restrict[[numfield, numfield], [int, int], numfield](+)](Z, nZ(p)), coset[int, restrict[[numfield, numfield], [int, int], numfield](+)](Z, nZ(p))], [nz_coset(p), nz_coset(p)], set[int]](product[int, restrict[[numfield, numfield], [int, int], numfield](+), restrict[[numfield, numfield], [int, int], numfield](*)](Z, nZ(p))), (+[int, restrict[[numfield, numfield], [int, int], numfield](+)])(1, nZ(p))]")))
+ (|surj_homo_Zp_Zpsq_TCC3| 0
+  (|surj_homo_Zp_Zpsq_TCC3-1| NIL 3932743127 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+   (|surj_homo_Zp_Zpsq| SUBTYPE
+    "restrict[coset[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)](ring_zn.Z, ring_zn.nZ(nz_zprime_group.p)), nz_coset(nz_zprime_group.p), bool].restrict(sets[coset[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)](ring_zn.Z, ring_zn.nZ(nz_zprime_group.p))].remove(ring_zn.nZ(nz_zprime_group.p), nz_zprime_group.Z_sq(nz_zprime_group.p)))"
+    "group[nz_coset(p), restrict[[coset[int, restrict[[numfield, numfield], [int, int], numfield](+)](Z, nZ(p)), coset[int, restrict[[numfield, numfield], [int, int], numfield](+)](Z, nZ(p))], [nz_coset(p), nz_coset(p)], set[int]](product[int, restrict[[numfield, numfield], [int, int], numfield](+), restrict[[numfield, numfield], [int, int], numfield](*)](Z, nZ(p))), (+[int, restrict[[numfield, numfield], [int, int], numfield](+)])(1, nZ(p))]")))
+ (|surj_homo_Zp_Zpsq_TCC4| 0
+  (|surj_homo_Zp_Zpsq_TCC4-1| NIL 3932743127 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+   (|surj_homo_Zp_Zpsq| SUBTYPE
+    "restrict[nz_coset(nz_zprime_group.p), (restrict[set[int], nz_coset(nz_zprime_group.p), bool].restrict(sets[set[int]].remove(ring_zn.nZ(nz_zprime_group.p), ring_zn.Z(nz_zprime_group.p)))), nz_coset_zsq(nz_zprime_group.p)].restrict(nz_zprime_group.phi)"
+    "[(restrict[set[int], nz_coset(nz_zprime_group.p), bool].restrict(sets[set[int]].remove(ring_zn.nZ(nz_zprime_group.p), ring_zn.Z(nz_zprime_group.p)))) -> (restrict[coset[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)](ring_zn.Z, ring_zn.nZ(nz_zprime_group.p)), nz_coset(nz_zprime_group.p), bool].restrict(sets[coset[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)](ring_zn.Z, ring_zn.nZ(nz_zprime_group.p))].remove(ring_zn.nZ(nz_zprime_group.p), nz_zprime_group.Z_sq(nz_zprime_group.p))))]")))
+ (|kernel_homo_Zp_Zpsq_TCC1| 0
+  (|kernel_homo_Zp_Zpsq_TCC1-1| NIL 3932743127 ("" (SUBTYPE-TCC) NIL NIL) NIL
+   NIL
+   (|kernel_homo_Zp_Zpsq| SUBTYPE "nz_zprime_group.phi"
+    "homomorphism[nz_coset(nz_zprime_group.p), restrict[[coset[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)](ring_zn.Z, ring_zn.nZ(nz_zprime_group.p)), coset[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)](ring_zn.Z, ring_zn.nZ(nz_zprime_group.p))], [nz_coset(nz_zprime_group.p), nz_coset(nz_zprime_group.p)], set[int]].restrict(product_coset_def[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+), restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.*)].product(ring_zn.Z, ring_zn.nZ(nz_zprime_group.p))), (cosets_def[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)].+)(1, ring_zn.nZ(nz_zprime_group.p)), nz_coset(nz_zprime_group.p), restrict[[coset[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)](ring_zn.Z, ring_zn.nZ(nz_zprime_group.p)), coset[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)](ring_zn.Z, ring_zn.nZ(nz_zprime_group.p))], [nz_coset(nz_zprime_group.p), nz_coset(nz_zprime_group.p)], set[int]].restrict(product_coset_def[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+), restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.*)].product(ring_zn.Z, ring_zn.nZ(nz_zprime_group.p))), (cosets_def[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)].+)(1, ring_zn.nZ(nz_zprime_group.p))](restrict[set[int], nz_coset(nz_zprime_group.p), bool].restrict(sets[set[int]].remove(ring_zn.nZ(nz_zprime_group.p), ring_zn.Z(nz_zprime_group.p))), restrict[coset[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)](ring_zn.Z, ring_zn.nZ(nz_zprime_group.p)), nz_coset(nz_zprime_group.p), bool].restrict(sets[coset[int, restrict[[numfield, numfield], [int, int], numfield].restrict(number_fields.+)](ring_zn.Z, ring_zn.nZ(nz_zprime_group.p))].remove(ring_zn.nZ(nz_zprime_group.p), nz_zprime_group.Z_sq(nz_zprime_group.p))))")))
+ (|card_ker_Zp_Zpsq_TCC1| 0
+  (|card_ker_Zp_Zpsq_TCC1-1| NIL 3932743127 ("" (SUBTYPE-TCC) NIL NIL) NIL NIL
+   (|card_ker_Zp_Zpsq| SUBTYPE "nz_zprime_group.ker_phi"
+    "finite_set[nz_coset(p)]"))))
+
